@@ -1,4 +1,4 @@
-import './directory-item.styles.scss'
+import './directory-item.styles.scss';
 
 const DirectoryItem = ({category}) => {
     const {imageUrl, title} = category;
