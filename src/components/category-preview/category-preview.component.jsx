@@ -1,6 +1,10 @@
 import ProductCard from '../product-card/product-card.component';
 
-import { CategoryPreviewContainer, Title, Preview } from './category-preview.styles';
+import { 
+    CategoryPreviewContainer, 
+    Title, 
+    Preview
+} from './category-preview.styles';
 
 const CategoryPreview = ({title, products}) => {
     return(
@@ -17,7 +21,7 @@ const CategoryPreview = ({title, products}) => {
                 ))}
             </Preview>
         </CategoryPreviewContainer>
-    )
-}
+    );
+};
 
 export default CategoryPreview;
