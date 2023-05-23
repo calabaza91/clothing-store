@@ -21,12 +21,13 @@ import {
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDhhi81p9hyca3Lzy4iQIUXV85C276thcY",
-  authDomain: "clothing-store-db-98e63.firebaseapp.com",
-  projectId: "clothing-store-db-98e63",
-  storageBucket: "clothing-store-db-98e63.appspot.com",
-  messagingSenderId: "1058143097966",
-  appId: "1:1058143097966:web:4934a5b9088dd6e2d2027f"
+    apiKey: "AIzaSyBnEKkQKsf9FtRbvwor7z1di3JsPjNp5Xg",
+    authDomain: "clothing-store-db-33f3b.firebaseapp.com",
+    projectId: "clothing-store-db-33f3b",
+    storageBucket: "clothing-store-db-33f3b.appspot.com",
+    messagingSenderId: "798844868631",
+    appId: "1:798844868631:web:2d5d8e453c9841e836a452",
+    measurementId: "G-LV4BTLNTJG"
 };
 
 initializeApp(firebaseConfig);
