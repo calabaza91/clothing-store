@@ -1,27 +1,35 @@
-import { createContext, useState, useEffect } from 'react'
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
-import { authStateChangedListener, createUserDocumentFromAuth } from '../utils/firebase/firebase.utils';
 import Navigation from './routes/navigation/navigation.component';
 import Home from './routes/home/home.component';
 import Authentication from './routes/authentication/authentication.component';
 import Shop from './routes/shop/shop.component';
 import Checkout from './routes/checkout/checkout.component';
+import { setCurrentUser } from './store/user/user.action';
+import { 
+  onAuthStateChangedListener,
+  createUserDocumentFromAuth
+} from './utils/firebase/firebase.utils';
+
 
 
 
 
 const App = () => {
   
+  const dispatch = useDispatch();
+
   useEffect(()=>{
-    const unsubscribe = authStateChangedListener((user)=>{
+    const unsubscribe = onAuthStateChangedListener((user)=>{
         if (user) {
             createUserDocumentFromAuth(user);
         }
-        setCurrentUser(user);
+        dispatch(setCurrentUser(user));
     });
 
     return unsubscribe
-},[])
+},[dispatch])
 
   return (
     <Routes>
